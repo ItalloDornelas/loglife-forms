@@ -70,6 +70,7 @@ export const Nav = styled.nav`
     align-items: center;
     @media (min-width: 768px) {
       flex-direction: row;
+      height: 0;
     }
   }
   li {

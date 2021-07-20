@@ -7,27 +7,20 @@ import {
   Background,
 } from "./styles";
 import { Link, useHistory } from "react-router-dom";
-import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Input from "../../components/Input/Input";
 import { useForm } from "react-hook-form";
 import Button from "../../components/Button/Button";
 import { useAuth } from "../../provider/auth/auth";
+import { Schema } from "./Schema";
 
 const Login = () => {
   const { login } = useAuth();
-  const schema = yup.object().shape({
-    email: yup.string().email("E-mail inválido").required("Campo obrigatório!"),
-    password: yup
-      .string()
-      .required("Campo obrigatório!")
-      .min(5, "Mínimo de 5 dígitos!"),
-  });
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(schema) });
+  } = useForm({ resolver: yupResolver(Schema) });
 
   interface Auth {
     id?: number;
