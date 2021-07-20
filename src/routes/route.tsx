@@ -24,11 +24,13 @@ const Route = ({ isPrivate = false, component: Component, ...rest }: Props) => {
         return isPrivate === !!token ? (
           <Component />
         ) : (
-          <Redirect
-            to={{
-              pathname: isPrivate ? "/login" : "/dashboard",
-            }}
-          />
+          <>
+            <Redirect
+              to={{
+                pathname: isPrivate ? "/login" : "/dashboard",
+              }}
+            />
+          </>
         );
       }}
     />

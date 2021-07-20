@@ -14,7 +14,7 @@ export const Content = styled.div`
     font-size: 2.5rem;
     color: var(--dark-blue);
     span {
-      color: var(--light-blue);
+      color: var(--red);
     }
   }
   div {

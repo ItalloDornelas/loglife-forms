@@ -13,6 +13,7 @@ interface AuthProviderData {
   auth: Auth[];
   setAuth: Dispatch<SetStateAction<Auth[]>>;
   login: (data: Auth, history: History) => void;
+  logout: (history: History) => void;
 }
 
 interface AuthProviderProps {
@@ -30,9 +31,16 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     history.push("/dashboard");
     toast.info("Bem vindo");
   };
+  const logout = (history: History) => {
+    localStorage.clear();
+    history.push("/");
+    const logout = localStorage.getItem("@token") || "[]";
+    setAuth(JSON.parse(logout));
+    toast.info("Volte sempre");
+  };
 
   return (
-    <AuthContext.Provider value={{ auth, login, setAuth }}>
+    <AuthContext.Provider value={{ auth, login, setAuth, logout }}>
       {children}
     </AuthContext.Provider>
   );
