@@ -11,14 +11,11 @@ function Home() {
     <Container>
       <Content>
         <h1>
-          do<span>.</span>it
+          Log<span>.</span>Life
         </h1>
-        <span>Organize-se de forma fácil e efetiva</span>
+        <span>Conheça nossos serviços</span>
         <div>
-          <Button onClick={() => handleNavegation("/signup")} whiteSchema>
-            Cadastre-se
-          </Button>
-          <Button onClick={() => handleNavegation("/login")}>Login</Button>
+          <Button onClick={() => handleNavegation("/login")}>Entrar</Button>
         </div>
       </Content>
     </Container>

@@ -9,11 +9,11 @@ export const Container = styled.button<WhiteSchemaProps>`
   border-radius: 8px;
   border: 2px solid var(--black);
   font-family: "Roboto Mono", monospace;
-  margin-top: 16px;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   transition: 0.5s;
   :hover {
-    border: 2px solid #c85311;
-    color: #c85311;
+    border: 2px solid var(--light-blue);
+    color: var(--light-blue);
   }
 `;

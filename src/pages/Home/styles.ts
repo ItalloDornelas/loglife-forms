@@ -12,8 +12,9 @@ export const Content = styled.div`
   h1 {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 2.5rem;
+    color: var(--dark-blue);
     span {
-      color: #c85311;
+      color: var(--light-blue);
     }
   }
   div {
@@ -28,5 +29,6 @@ export const Content = styled.div`
     margin-bottom: 2rem;
     font-size: 1.8rem;
     flex-wrap: wrap;
+    color: var(--light-blue);
   }
 `;
