@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import ImgBackground from "assets/img/bg.jpg";
+import ImgBackground from "../../assets/img/bg.jpg";
 
 export const ContainerFormAll = styled.div`
   display: flex;
@@ -46,7 +46,7 @@ export const ContainerForm = styled.div`
     margin-bottom: 20px;
     margin-top: 30px;
     color: var(--light-blue);
-
+    text-transform: uppercase;
     font-style: normal;
     font-weight: bold;
     font-size: 38px;
@@ -87,10 +87,11 @@ export const Background = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+
   width: 100vw;
   flex-direction: column;
   @media (min-width: 768px) {
+    margin: 0 1rem 0;
     width: 50vw;
   }
 `;

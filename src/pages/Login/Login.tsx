@@ -20,8 +20,8 @@ const Login = () => {
     email: yup.string().email("E-mail inválido").required("Campo obrigatório!"),
     password: yup
       .string()
-      .min(5, "Mínimo de 5 dígitos!")
-      .required("Campo obrigatório!"),
+      .required("Campo obrigatório!")
+      .min(5, "Mínimo de 5 dígitos!"),
   });
   const {
     register,
@@ -43,7 +43,7 @@ const Login = () => {
     <ContainerOut>
       <Background />
       <Container>
-        <p style={{ margin: "5rem 1rem 0" }}>
+        <p>
           <Link to="/" style={{ color: "#444548" }}>
             Home
           </Link>
@@ -56,12 +56,12 @@ const Login = () => {
           <ContainerRegister>
             <ContainerForm>
               <form onSubmit={handleSubmit(onSubmitFunction)}>
-                <h2>LOGIN</h2>
+                <h2>Login</h2>
                 <Input
                   register={register}
                   name="email"
                   label="E-mail"
-                  error={errors.username?.message}
+                  error={errors.email?.message}
                   placeholder="E-mail"
                 />
                 <div>
@@ -74,11 +74,7 @@ const Login = () => {
                     placeholder="Password"
                   />
                 </div>
-                <Button whiteSchema>Entrar</Button>
-                <h4>
-                  Ainda não possui cadastro?
-                  <Link to="/register">Cadastrar</Link>
-                </h4>
+                <Button type="submit">Entrar</Button>
               </form>
             </ContainerForm>
           </ContainerRegister>

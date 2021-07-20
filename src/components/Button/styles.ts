@@ -10,7 +10,7 @@ export const Container = styled.button<WhiteSchemaProps>`
   border: 2px solid var(--black);
   font-family: "Roboto Mono", monospace;
   width: 80%;
-  margin: 0 auto;
+  margin: 10px auto;
   transition: 0.5s;
   :hover {
     border: 2px solid var(--light-blue);

@@ -3,11 +3,17 @@ interface ButtonProps {
   children: string;
   whiteSchema?: boolean;
   onClick?: () => void;
+  type?: string;
 }
 
-const Button = ({ children, whiteSchema = false, ...rest }: ButtonProps) => {
+const Button = ({
+  children,
+  type,
+  whiteSchema = false,
+  ...rest
+}: ButtonProps) => {
   return (
-    <Container whiteSchema={whiteSchema} type="button" {...rest}>
+    <Container whiteSchema={whiteSchema} {...rest}>
       {children}
     </Container>
   );
