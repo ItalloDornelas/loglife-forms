@@ -1,7 +1,7 @@
 import { useHistory } from "react-router";
 import Button from "../../components/Button/Button";
 import { Container, Content } from "./styles";
-function Home() {
+const Home = () => {
   const history = useHistory();
   const handleNavegation = (path: string) => {
     return history.push(path);
@@ -20,6 +20,6 @@ function Home() {
       </Content>
     </Container>
   );
-}
+};
 
 export default Home;
