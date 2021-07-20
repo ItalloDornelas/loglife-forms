@@ -6,16 +6,16 @@ import {
   ContainerOut,
   Background,
 } from "./styles";
-
 import { Link, useHistory } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Input from "../../components/Input/Input";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
 import Button from "../../components/Button/Button";
+import { useAuth } from "../../provider/auth/auth";
 
 const Login = () => {
+  const { login } = useAuth();
   const schema = yup.object().shape({
     email: yup.string().email("E-mail inválido").required("Campo obrigatório!"),
     password: yup
@@ -35,9 +35,11 @@ const Login = () => {
     password: string;
   }
 
-  //   const history = useHistory();
+  const history = useHistory();
 
-  const onSubmitFunction = ({ email, password }: Auth) => {};
+  const onSubmitFunction = (data: Auth) => {
+    login(data, history);
+  };
 
   return (
     <ContainerOut>
