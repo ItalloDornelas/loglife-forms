@@ -1,13 +1,18 @@
 import styled from "styled-components";
+import { Container } from "@material-ui/core";
 
-export const Container = styled.div`
+export const ContainerStyled = styled(Container)`
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  height: 100vh;
+  height: 80vh;
+  padding-left: 5px;
+  color: var(--red);
 `;
-export const Content = styled.div`
+export const ContentDashboard = styled.div`
   max-width: 400px;
   h1 {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

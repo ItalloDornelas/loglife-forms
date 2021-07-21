@@ -1,19 +1,18 @@
 import styled from "styled-components";
-interface WhiteSchemaProps {
-  whiteSchema: boolean;
+interface redSchemaProps {
+  redSchema: boolean;
 }
-export const Container = styled.button<WhiteSchemaProps>`
-  background: ${(props) => (props.whiteSchema ? "#f5f5f5" : "#0c0d0d")};
-  color: ${(props) => (props.whiteSchema ? "#0c0d0d" : "#f5f5f5")};
+export const Container = styled.button<redSchemaProps>`
+  background: ${(props) => (props.redSchema ? "#c53030" : "#252744")};
+  color: ${(props) => (props.redSchema ? "#f5f5f5" : "#c53030")};
   height: 45px;
+  border: none;
   border-radius: 8px;
-  border: 2px solid var(--black);
-  font-family: "Roboto Mono", monospace;
   width: 80%;
   margin: 10px auto;
   transition: 0.5s;
   :hover {
-    border: 2px solid var(--light-blue);
-    color: var(--light-blue);
+    border: 2px solid var(--white);
+    color: var(--vanilla);
   }
 `;

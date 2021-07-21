@@ -11,13 +11,13 @@ export const AppBarStyled = styled(AppBar)<{ openMenu: boolean }>`
     justify-content: space-between;
     width: 100vw;
     padding: 1rem;
-    cursor: pointer;
   }
   h2 {
     color: var(--vanilla);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 2.5rem;
     text-transform: uppercase;
+    cursor: pointer;
     span {
       color: var(--red);
     }
@@ -50,7 +50,6 @@ export const ToolbarStyled = styled(Toolbar)<{ openMenu: boolean }>`
 
 export const Nav = styled.nav`
   width: 100vw;
-  height: 92vh;
   background: var(--white);
   color: var(--blue);
   display: flex;

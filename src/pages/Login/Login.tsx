@@ -6,7 +6,7 @@ import {
   ContainerOut,
   Background,
 } from "./styles";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Input from "../../components/Input/Input";
 import { useForm } from "react-hook-form";
@@ -39,15 +39,6 @@ const Login = () => {
       <Background />
 
       <Container>
-        <p>
-          <Link to="/" style={{ color: "#444548" }}>
-            Home
-          </Link>
-          <span> {">"} </span>
-          <Link to="/login" style={{ color: " #4DBFF6" }}>
-            Login
-          </Link>
-        </p>
         <ContainerFormAll>
           <ContainerRegister>
             <ContainerForm>

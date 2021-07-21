@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 interface ButtonProps {
-  children: string;
-  whiteSchema?: boolean;
+  children?: string;
+  redSchema?: boolean;
   onClick?: () => void;
   type?: string;
 }
@@ -9,11 +9,11 @@ interface ButtonProps {
 const Button = ({
   children,
   type,
-  whiteSchema = false,
+  redSchema = false,
   ...rest
 }: ButtonProps) => {
   return (
-    <Container whiteSchema={whiteSchema} {...rest}>
+    <Container redSchema={redSchema} {...rest}>
       {children}
     </Container>
   );

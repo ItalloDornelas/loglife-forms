@@ -9,7 +9,7 @@ export const ContainerFormAll = styled.div`
   text-align: center;
   min-height: 80vh;
   overflow-y: hidden;
-  box-sizing: border-box;
+
   @media (min-width: 571px) {
     flex-direction: row;
   }
@@ -17,8 +17,6 @@ export const ContainerFormAll = styled.div`
 
 export const ContainerRegister = styled.div`
   width: 100%;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const ContainerForm = styled.div`
@@ -51,15 +49,6 @@ export const ContainerForm = styled.div`
     font-weight: bold;
     font-size: 38px;
   }
-
-  h4 {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    a {
-      color: var(--light-blue);
-    }
-  }
 `;
 const appearFromLeft = keyframes`
 from{
@@ -87,11 +76,10 @@ export const Background = styled.div`
 
 export const Container = styled.div`
   display: flex;
-
+  justify-content: space-around;
   width: 100vw;
   flex-direction: column;
   @media (min-width: 768px) {
-    margin: 0 1rem 0;
     width: 50vw;
   }
 `;
