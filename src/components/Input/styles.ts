@@ -26,6 +26,9 @@ export const InputContainer = styled.div<InputsProps>`
     css`
       border-color: var(--red);
     `}
+  ::placeholder {
+    color: var(--red);
+  }
 `;
 
 export const StyleTextField = styled(TextField)`
@@ -34,11 +37,11 @@ export const StyleTextField = styled(TextField)`
   }
 
   .MuiOutlinedInput-root {
-    margin: 10px 0 10px 0;
-    padding: 2px;
+    margin: 5px 0 5px 0;
+    padding: 1px;
 
     &.Mui-focused fieldset {
-      border-color: var(--light-blue);
+      border-color: var(--dark-blue);
     }
   }
 `;

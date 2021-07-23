@@ -32,13 +32,13 @@ export default function Header() {
             <h2 onClick={() => history.push("/")}>
               Log<span>.</span>Life
             </h2>
-            {Number(width) < 768 && (
+            {Number(width) < 888 && (
               <div className="icon" onClick={handleMenu}>
                 {openMenu ? "x" : <CgMenuGridO />}
               </div>
             )}
           </h1>
-          {openMenu || Number(width) > 768 ? (
+          {openMenu || Number(width) > 888 ? (
             <>
               <Nav>
                 <ul>
@@ -47,6 +47,18 @@ export default function Header() {
                     onClick={() => handleRedirect("/dashboard")}
                   >
                     Serviços
+                  </li>
+                  <li
+                    className="btn-1"
+                    onClick={() => handleRedirect("/registerMember")}
+                  >
+                    Tornar-se membro
+                  </li>
+                  <li
+                    className="btn-1"
+                    onClick={() => handleRedirect("/listMember")}
+                  >
+                    Lista de Membros
                   </li>
                   {token ? (
                     <li className="btn-1" onClick={() => logout(history)}>

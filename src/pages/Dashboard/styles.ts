@@ -8,7 +8,7 @@ export const ContainerStyled = styled(Container)`
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 80vh;
+  min-height: 60vh;
   padding-left: 5px;
   color: var(--red);
 `;

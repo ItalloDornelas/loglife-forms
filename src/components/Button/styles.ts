@@ -4,7 +4,7 @@ interface redSchemaProps {
 }
 export const Container = styled.button<redSchemaProps>`
   background: ${(props) => (props.redSchema ? "#c53030" : "#252744")};
-  color: ${(props) => (props.redSchema ? "#f5f5f5" : "#c53030")};
+  color: var(--white);
   height: 45px;
   border: none;
   border-radius: 8px;

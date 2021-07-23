@@ -6,10 +6,9 @@ export const ContainerFormAll = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 85vh;
   text-align: center;
-  min-height: 80vh;
-  overflow-y: hidden;
-
+  overflow: hidden;
   @media (min-width: 571px) {
     flex-direction: row;
   }
@@ -65,7 +64,7 @@ to{
 
 export const Background = styled.div`
   width: 50vw;
-  height: 100vh;
+  height: auto;
   background: url(${ImgBackground}) no-repeat center #2d3997;
   animation: ${appearFromLeft} 2s;
   background-size: cover;

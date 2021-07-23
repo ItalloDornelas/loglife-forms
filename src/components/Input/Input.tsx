@@ -10,18 +10,26 @@ interface InputProps {
   placeholder?: string;
 }
 
-function Input({ label, register, error, name, ...rest }: InputProps) {
+function Input({ type, label, register, error, name, ...rest }: InputProps) {
   return (
     <Container>
       <InputContainer isErrored={!!error}>
         <StyleTextField
-          label={label}
+          label={
+            type === "time" || type === "date"
+              ? (label = "")
+              : error
+              ? error
+              : label
+          }
           variant="outlined"
           {...register(name)}
           {...rest}
+          error={!!error}
+          type={type}
+          helperText={type === "time" || type === "date" ? error : ""}
         />
       </InputContainer>
-      <div>{!!error && <span> - {error}</span>}</div>
     </Container>
   );
 }

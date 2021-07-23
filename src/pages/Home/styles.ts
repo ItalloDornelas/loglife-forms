@@ -5,7 +5,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100vh;
+  height: 60vh;
 `;
 export const Content = styled.div`
   max-width: 400px;

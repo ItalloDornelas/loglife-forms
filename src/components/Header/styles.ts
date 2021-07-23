@@ -1,10 +1,11 @@
-import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import styled from "styled-components";
 
-export const AppBarStyled = styled(AppBar)<{ openMenu: boolean }>`
+export const AppBarStyled = styled.header<{ openMenu: boolean }>`
   transition: all 0.5s ease-out;
   justify-content: center;
+  width: 100%;
+  background: var(--dark-blue);
   h1 {
     font-size: 1.5rem;
     display: flex;
@@ -32,8 +33,8 @@ export const ToolbarStyled = styled(Toolbar)<{ openMenu: boolean }>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  @media (min-width: 768px) {
+  color: var(--white);
+  @media (min-width: 888px) {
     flex-direction: row;
   }
 
@@ -49,16 +50,19 @@ export const ToolbarStyled = styled(Toolbar)<{ openMenu: boolean }>`
 `;
 
 export const Nav = styled.nav`
-  width: 100vw;
+  width: 100%;
   background: var(--white);
   color: var(--blue);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media (min-width: 768px) {
+  position: fixed;
+  z-index: 3;
+  top: 85px;
+  @media (min-width: 888px) {
     background: transparent;
-    height: 3rem;
+    position: relative;
+    top: 10px;
   }
   transition: 0.5s;
   ul {
@@ -67,7 +71,8 @@ export const Nav = styled.nav`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    @media (min-width: 768px) {
+
+    @media (min-width: 888px) {
       flex-direction: row;
       height: 0;
     }
@@ -80,10 +85,10 @@ export const Nav = styled.nav`
     font-size: 1.5rem;
     border-radius: 5px;
     font-weight: 600;
-    color: var(--light-blue);
+    color: var(--red);
     transition: 0.3s;
     letter-spacing: 0.02rem;
-    @media (min-width: 768px) {
+    @media (min-width: 888px) {
       font-size: 1rem;
       letter-spacing: 0;
       padding: 0.5rem;
@@ -98,8 +103,8 @@ export const Nav = styled.nav`
     }
 
     &:hover {
-      color: var(--light-blue);
-      border: 1px var(--light-blue) solid;
+      color: var(--red);
+      border: 1px var(--red) solid;
       letter-spacing: 0.1rem;
     }
   }
