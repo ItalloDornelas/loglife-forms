@@ -1,4 +1,4 @@
-import FormsPF from "../../components/FormsPF/FormsPF";
+import Forms from "../../components/Forms/Forms";
 import { ContainerForm, ContainerOut } from "./styles";
 
 const Register = () => {
@@ -7,7 +7,7 @@ const Register = () => {
       <ContainerForm>
         <h2>Cadastre-se</h2>
         <h4>Escolha as opções</h4>
-        <FormsPF />
+        <Forms />
       </ContainerForm>
     </ContainerOut>
   );

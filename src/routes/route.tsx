@@ -16,7 +16,7 @@ const Route = ({ isPrivate = false, component: Component, ...rest }: Props) => {
   useEffect(() => {
     setToken(localStorage.getItem("@token") || "");
   }, [auth]);
-  console.log(token);
+
   return (
     <ReactDOMRoute
       {...rest}

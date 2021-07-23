@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerForm = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 25px;
+
   h2 {
     font-size: 18px;
     font-weight: 400;
@@ -15,6 +15,7 @@ export const ContainerForm = styled.div`
   h4 {
     color: var(--dark-blue);
     font-size: 1rem;
+    margin: 0 30px;
   }
 `;
 export const ContainerOut = styled.div`

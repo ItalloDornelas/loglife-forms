@@ -29,9 +29,11 @@ export default function Header() {
       <AppBarStyled openMenu={openMenu}>
         <ToolbarStyled openMenu={openMenu}>
           <h1>
-            <h2 onClick={() => history.push("/")}>
-              Log<span>.</span>Life
-            </h2>
+            <div>
+              <h2 onClick={() => history.push("/")}>
+                Log<span>.</span>Life
+              </h2>
+            </div>
             {Number(width) < 888 && (
               <div className="icon" onClick={handleMenu}>
                 {openMenu ? "x" : <CgMenuGridO />}

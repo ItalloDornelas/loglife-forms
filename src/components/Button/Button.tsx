@@ -4,11 +4,13 @@ interface ButtonProps {
   redSchema?: boolean;
   onClick?: () => void;
   type?: string;
+  form?: string;
 }
 
 const Button = ({
   children,
   type,
+  form,
   redSchema = false,
   ...rest
 }: ButtonProps) => {

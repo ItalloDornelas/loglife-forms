@@ -37,7 +37,6 @@ const Login = () => {
   return (
     <ContainerOut>
       <Background />
-
       <Container>
         <ContainerFormAll>
           <ContainerRegister>

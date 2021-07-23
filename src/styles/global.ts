@@ -15,6 +15,7 @@ export default createGlobalStyle`
             --blue: #34438E;
             --light-blue: #4DBFF6;
             --red: #c53030;
+            --gray: #E0DFD5;
         }
     body{
        background: var(--vanilla);

@@ -8,7 +8,7 @@ export const Container = styled.button<redSchemaProps>`
   height: 45px;
   border: none;
   border-radius: 8px;
-  width: 80%;
+  width: 60%;
   margin: 10px auto;
   transition: 0.5s;
   :hover {

@@ -11,7 +11,8 @@ export const AutoCompleteStyle = styled(Autocomplete)`
   }
 `;
 export const InputStyle = styled(TextField)`
-  .MuiOutlinedInput-root {
+  .MuiTextField-root {
+    margin-top: 0;
     &.Mui-focused fieldset {
       border-color: var(--dark-blue);
     }
