@@ -41,12 +41,15 @@ export const ContainerForm = styled.div`
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 20px;
-    margin-top: 30px;
-    color: var(--light-blue);
+    color: var(--red);
     text-transform: uppercase;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-style: normal;
     font-weight: bold;
     font-size: 38px;
+  }
+  h1 {
+    color: var(--dark-blue);
   }
 `;
 const appearFromLeft = keyframes`

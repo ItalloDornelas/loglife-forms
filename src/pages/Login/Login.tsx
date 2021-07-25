@@ -42,6 +42,7 @@ const Login = () => {
           <ContainerRegister>
             <ContainerForm>
               <form onSubmit={handleSubmit(onSubmitFunction)}>
+                <span>Para acessar o conteúdo</span>
                 <h2>Login</h2>
                 <Input
                   register={register}

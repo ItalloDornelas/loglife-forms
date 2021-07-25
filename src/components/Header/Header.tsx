@@ -58,7 +58,7 @@ export default function Header() {
                   </li>
                   <li
                     className="btn-1"
-                    onClick={() => handleRedirect("/listMember")}
+                    onClick={() => handleRedirect("/listMembers")}
                   >
                     Lista de Membros
                   </li>

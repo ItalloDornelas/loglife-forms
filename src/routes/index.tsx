@@ -5,6 +5,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import Route from "./route";
 import { Switch } from "react-router-dom";
 import Register from "../pages/RegisterMembers/RegisterMembers";
+import ListMembers from "../pages/ListMembers/ListMembers";
 
 const Routes = () => {
   return (
@@ -13,6 +14,7 @@ const Routes = () => {
       <Route path="/login" component={Login} />
       <Route path="/dashboard" isPrivate component={Dashboard} />
       <Route path="/registerMember" isPrivate component={Register} />
+      <Route path="/listMembers" isPrivate component={ListMembers} />
     </Switch>
   );
 };

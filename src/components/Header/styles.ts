@@ -5,7 +5,11 @@ export const AppBarStyled = styled.header<{ openMenu: boolean }>`
   transition: all 0.5s ease-out;
   justify-content: center;
   width: 100%;
-  background: var(--dark-blue);
+  background: var(--blue);
+
+  @media (min-width: 888px) {
+    position: relative;
+  }
   h1 {
     font-size: 1.5rem;
     display: flex;
@@ -14,7 +18,7 @@ export const AppBarStyled = styled.header<{ openMenu: boolean }>`
     padding: 1rem;
   }
   h2 {
-    color: var(--vanilla);
+    color: var(--white);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -41,7 +45,12 @@ export const ToolbarStyled = styled(Toolbar)<{ openMenu: boolean }>`
   h1 {
     transition: 0.5s;
     .icon {
+      z-index: 3;
+      color: ${({ openMenu }) => (openMenu ? "black" : "white")};
       content: "x";
+      top: 30px;
+      right: 20px;
+      position: ${({ openMenu }) => openMenu && "fixed"};
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -57,12 +66,12 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: center;
   position: fixed;
-  z-index: 3;
-  top: 85px;
+  z-index: 2;
+  top: 0;
   @media (min-width: 888px) {
     background: transparent;
     position: relative;
-    top: 10px;
+    top: 5px;
   }
   transition: 0.5s;
   ul {

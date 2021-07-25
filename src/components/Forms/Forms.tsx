@@ -19,9 +19,12 @@ import Select from "../Select/Select";
 import { states } from "../../mock/states";
 import { ChangeEvent, useState } from "react";
 import { useValueInput } from "../../provider/valueInput/valueInput";
+import { useCards } from "../../provider/card/card";
+import CardsProps from "../../model/CardsProps";
 
 const Forms = () => {
   const { valueInput } = useValueInput();
+  const { setCard, card } = useCards();
   const {
     register,
     handleSubmit,
@@ -42,20 +45,30 @@ const Forms = () => {
   };
   const { caminhao, carro, moto } = valueCheck;
   const newError = [moto, caminhao, carro].filter((v) => v).length < 1;
-  const history = useHistory();
-  const onSubmitFunction = (data: any) => {
-    console.log(data);
-    history.push("/");
+  const [valueRadio, setValueRadio] = useState("Ativo");
+
+  const handleChangeRadio = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValueRadio((event.target as HTMLInputElement).value);
   };
+  const history = useHistory();
+  const onSubmitFunction = (data: CardsProps) => {
+    setCard([...card, data]);
+    history.push("/listMembers");
+  };
+
   return (
     <ContainerForm>
       <form onSubmit={handleSubmit(onSubmitFunction)}>
         <Wrapper>
           <span>Tipo pessoa</span>
-          <Select register={register} item={typeClient} />
+          <Select name="typePerson" register={register} item={typeClient} />
         </Wrapper>
         <FormControl component="fieldset">
-          <RadioGroup aria-label="action">
+          <RadioGroup
+            aria-label="action"
+            value={valueRadio}
+            onChange={handleChangeRadio}
+          >
             <span>Você é um cliente Ativo?</span>
             <FormControlLabel value="Ativo" control={<Radio />} label="Ativo" />
             <FormControlLabel
@@ -79,8 +92,8 @@ const Forms = () => {
           <Input
             register={register}
             label="Nome fantasia"
-            name="username"
-            error={errors.username?.message}
+            name="fantasyName"
+            error={errors.fantasyName?.message}
             placeholder="Nome fantasia"
             type="text"
           />
@@ -97,9 +110,9 @@ const Forms = () => {
         ) : (
           <Input
             register={register}
-            name="surname"
+            name="corporateName"
             label="Razão social"
-            error={errors.surname?.message}
+            error={errors.corporateName?.message}
             placeholder="Razão social"
             type="text"
           />
@@ -174,7 +187,7 @@ const Forms = () => {
         />
         <Wrapper>
           <span>Escolha seu estado</span>
-          <Select register={register} item={states} />
+          <Select name="states" register={register} item={states} />
         </Wrapper>
 
         <Wrapper>

@@ -13,11 +13,17 @@ const Dashboard = () => {
         <h2>Seja bem vindo</h2>
         <ContentDashboard>
           <h1>
-            Cadastre venha fazer parte da Log<span>.</span>Life
+            Faça parte da Log<span>.</span>Life
           </h1>
           <span></span>
           <div>
-            <Button redSchema onClick={() => handleNavegation("/cadastro")}>
+            <Button onClick={() => handleNavegation("/listMembers")}>
+              Confira Lista de Membros
+            </Button>
+            <Button
+              redSchema
+              onClick={() => handleNavegation("/registerMember")}
+            >
               Cadastrar
             </Button>
           </div>

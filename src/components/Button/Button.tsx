@@ -1,6 +1,7 @@
+import { IconType } from "react-icons/lib";
 import { Container } from "./styles";
 interface ButtonProps {
-  children?: string;
+  children?: string | IconType;
   redSchema?: boolean;
   onClick?: () => void;
   type?: string;

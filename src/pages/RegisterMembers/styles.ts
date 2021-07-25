@@ -6,8 +6,8 @@ export const ContainerForm = styled.div`
 
   h2 {
     font-size: 18px;
+    padding: 1rem 1rem 1rem 1rem;
     font-weight: 400;
-    margin-bottom: 20px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 2.5rem;
     color: var(--dark-blue);

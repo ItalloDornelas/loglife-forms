@@ -9,7 +9,6 @@ export const ContainerStyled = styled(Container)`
   align-items: center;
   text-align: center;
   min-height: 60vh;
-  padding-left: 5px;
   color: var(--red);
 `;
 export const ContentDashboard = styled.div`

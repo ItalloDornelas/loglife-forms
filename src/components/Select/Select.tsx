@@ -6,9 +6,10 @@ import { useState } from "react";
 interface ItemProps {
   item: { nome?: string; value?: string }[];
   register: UseFormRegister<FieldValues>;
+  name: string;
 }
 
-const Select = ({ item, register }: ItemProps) => {
+const Select = ({ name, item, register }: ItemProps) => {
   const { valueInput, setValueInput } = useValueInput();
   const [valueState, setValueState] = useState("");
   return (
@@ -21,6 +22,7 @@ const Select = ({ item, register }: ItemProps) => {
       }}
       renderInput={(params) => (
         <InputStyle
+          {...register(name)}
           {...params}
           value={item === states ? valueState : valueInput}
           required
