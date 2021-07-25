@@ -15,7 +15,7 @@ export const Schema = yup.object().shape({
   cep: yup
     .string()
     .required("Campo obrigatório!!")
-    .matches(/^\d{5}-\d{3}$/, "CEP inválido"),
+    .matches(/^\d{5}\d{3}$/, "CEP inválido"),
   street: yup.string().required("Campo obrigatório!!"),
   number: yup.string().required("Campo obrigatório!!"),
   city: yup.string().required("Campo obrigatório!!"),
@@ -38,7 +38,7 @@ export const SchemaPj = yup.object().shape({
   cep: yup
     .string()
     .required("Campo obrigatório!!")
-    .matches(/^\d{5}-\d{3}$/, "CEP inválido"),
+    .matches(/^\d{5}\d{3}$/, "CEP inválido"),
   street: yup.string().required("Campo obrigatório!!"),
   number: yup.string().required("Campo obrigatório!!"),
   city: yup.string().required("Campo obrigatório!!"),
